@@ -20,8 +20,12 @@ public class BusinessController {
     @Autowired
     private IBusinessService businessService;
 
-    // localhost:20000/base/business/buy
-    // 因为代码设定的请求方式是Post,所以不能使用浏览器输入地址栏的方式测试,必须用knife4j
+    /**
+     * localhost:20000/base/business/buy
+     * 因为代码设定的请求方式是Post,所以不能使用浏览器输入地址栏的方式测试,必须用knife4j
+     *
+     * @return JsonResult
+     */
     @PostMapping("/buy")
     @ApiOperation("执行业务的触发")
     public JsonResult buy() {
