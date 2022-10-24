@@ -1,6 +1,6 @@
 spring:
   application:
-    name: nacos-order # 定义当前服务名称
+    name: nacos-stock # 定义当前服务名称
   cloud:
     nacos:
       discovery:
@@ -11,4 +11,4 @@ spring:
     password: root
 logging:
   level:
-    com.syt.mall.order: debug
+    com.syt.mall.stock: debug
