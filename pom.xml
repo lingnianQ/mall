@@ -23,6 +23,7 @@
         <module>mall-stock</module>
         <module>mall-commons</module>
         <module>mall-business</module>
+        <module>mall-cart</module>
     </modules>
 
     <properties>
