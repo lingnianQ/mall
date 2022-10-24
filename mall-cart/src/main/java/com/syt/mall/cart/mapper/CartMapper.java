@@ -21,13 +21,13 @@ public interface CartMapper {
      * @return 受影响的行
      */
     @Insert("INSERT INTO cart_tbl(commodity_code,price,count,user_id)" +
-            " values(#{commodityCOde},#{price},#{count},#{userId})")
+            " values(#{commodityCode},#{price},#{count},#{userId})")
     int insertCart(Cart cart);
 
     /**
      * 删除购物车商品
      *
-     * @param userId 用户id
+     * @param userId        用户id
      * @param commodityCode 商品编号
      * @return 行数
      */

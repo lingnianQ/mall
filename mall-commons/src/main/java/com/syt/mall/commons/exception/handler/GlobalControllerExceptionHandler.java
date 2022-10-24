@@ -22,7 +22,7 @@ public class GlobalControllerExceptionHandler {
      * 处理业务异常
      */
     @ExceptionHandler({MallServiceException.class})
-    public JsonResult<Void> handleCoolSharkServiceException(MallServiceException e) {
+    public JsonResult<Void> handleMallServiceException(MallServiceException e) {
         log.debug("出现业务异常，业务错误码={}，描述文本={}", e.getResponseCode().getValue(), e.getMessage());
         e.printStackTrace();
         JsonResult<Void> result = JsonResult.failed(e);

@@ -2,8 +2,10 @@ package com.syt.mall.cart.service.impl;
 
 import com.syt.mall.cart.mapper.CartMapper;
 import com.syt.mall.cart.service.ICartService;
+import com.syt.mall.commons.exception.MallServiceException;
 import com.syt.mall.commons.pojo.cart.dto.CartAddDTO;
 import com.syt.mall.commons.pojo.cart.model.Cart;
+import com.syt.mall.commons.restful.ResponseCode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,18 +26,25 @@ public class CartServiceImpl implements ICartService {
 
     @Override
     public void cartAdd(CartAddDTO cartAddDTO) {
-        cartAddDTO.setUserId("UU200");
-        cartAddDTO.setCommodityCode("PU300");
-        cartAddDTO.setCount(10);
-        cartAddDTO.setPrice(300);
         Cart cart = new Cart();
         BeanUtils.copyProperties(cartAddDTO, cart);
         int i = cartMapper.insertCart(cart);
 
+        if (i != 1) {
+            throw new MallServiceException(ResponseCode.CONFLICT, "添加失败");
+        }
+
+        log.info("购物车商品添加成功");
     }
 
     @Override
     public void deleteUserCart(String userId, String commodityCode) {
         int i = cartMapper.deleteCartByUserIdAndCommodityCode(userId, commodityCode);
+        if (i != 1) {
+            throw new MallServiceException(ResponseCode.CONFLICT, "删除失败");
+        }
+
+        log.info("购物车商品删除成功");
+
     }
 }
