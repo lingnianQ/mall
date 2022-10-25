@@ -1,4 +1,7 @@
 #HELP.md
+work
+sessionStore
+
 *.log
 target/
 !.mvn/wrapper/maven-wrapper.jar
