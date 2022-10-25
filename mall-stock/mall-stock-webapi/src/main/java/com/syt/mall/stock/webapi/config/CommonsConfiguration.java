@@ -1,4 +1,4 @@
-package com.syt.mall.stock.config;
+package com.syt.mall.stock.webapi.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

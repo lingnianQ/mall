@@ -1,16 +1,13 @@
-package com.syt.mall.stock;
+package com.syt.mall.stock.webapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * @author sytsn
- */
 @SpringBootApplication
-public class MallStockApplication {
+public class MallStockWebapiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MallStockApplication.class, args);
+        SpringApplication.run(MallStockWebapiApplication.class, args);
     }
 
 }

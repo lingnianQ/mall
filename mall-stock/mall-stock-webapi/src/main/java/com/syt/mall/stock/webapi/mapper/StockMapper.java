@@ -1,4 +1,4 @@
-package com.syt.mall.stock.mapper;
+package com.syt.mall.stock.webapi.mapper;
 
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Update;

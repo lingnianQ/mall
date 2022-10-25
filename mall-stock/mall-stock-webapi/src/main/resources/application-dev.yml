@@ -22,3 +22,7 @@ dubbo:
   registry:
     # 指定当前Dubbo服务注册中心的类型和位置
     address: nacos://127.0.0.1:8848
+  consumer:
+    # 当前项目启动时，是否检查当前项目需要的所有Dubbo服务是否可用
+    # 我们设置它为false，表示不检查,以减少启动时出错的情况
+    check: false

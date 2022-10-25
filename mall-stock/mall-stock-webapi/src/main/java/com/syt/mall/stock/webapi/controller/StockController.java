@@ -1,4 +1,4 @@
-package com.syt.mall.stock.controller;
+package com.syt.mall.stock.webapi.controller;
 
 import com.syt.mall.commons.pojo.stock.dto.StockReduceCountDTO;
 import com.syt.mall.commons.restful.JsonResult;

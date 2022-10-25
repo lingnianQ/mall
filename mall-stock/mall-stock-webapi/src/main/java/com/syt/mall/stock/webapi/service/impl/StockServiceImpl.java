@@ -1,10 +1,10 @@
-package com.syt.mall.stock.service.impl;
+package com.syt.mall.stock.webapi.service.impl;
 
 import com.syt.mall.commons.exception.MallServiceException;
 import com.syt.mall.commons.pojo.stock.dto.StockReduceCountDTO;
 import com.syt.mall.commons.restful.ResponseCode;
-import com.syt.mall.stock.mapper.StockMapper;
 import com.syt.mall.stock.service.IStockService;
+import com.syt.mall.stock.webapi.mapper.StockMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.syt.mall.stock.config;
+package com.syt.mall.stock.webapi.config;
 
 import com.github.xiaoymin.knife4j.spring.extension.OpenApiExtensionResolver;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,7 @@ public class Knife4jConfiguration {
     /**
      * 【重要】指定Controller包路径
      */
-    private String basePackage = "com.syt.mall.stock.controller";
+    private String basePackage = "com.syt.mall.stock.webapi.controller";
     /**
      * 分组名称
      */
