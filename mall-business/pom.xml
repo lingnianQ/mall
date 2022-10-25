@@ -35,7 +35,17 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
-
+        <!--dubbo依赖-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-dubbo</artifactId>
+        </dependency>
+        <!--business消费order模块的服务,需要添加order模块业务逻辑层接口的依赖-->
+        <dependency>
+            <groupId>com.syt</groupId>
+            <artifactId>mall-order-service</artifactId>
+            <version>0.0.1</version>
+        </dependency>
     </dependencies>
 
 </project>

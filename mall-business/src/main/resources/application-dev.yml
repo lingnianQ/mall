@@ -9,3 +9,17 @@ spring:
         server-addr: localhost:8848
         # ephemeral设置当前项目启动时注册到nacos的类型 true(默认):临时实例 false:永久实例
         ephemeral: false
+dubbo:
+  protocol:
+    # port设置为-1 表示当前dubbo框架使用的端口自动寻找
+    # 使用端口的规则时从20880开始寻找可用端口，+1寻找
+    port: -1
+    # 设置连接的名称，一般固定为dubbo即可
+    name: dubbo
+  registry:
+    # 指定当前Dubbo服务注册中心的类型和位置
+    address: nacos://127.0.0.1:8848
+  consumer:
+    # 当前项目启动时，是否检查当前项目需要的所有Dubbo服务是否可用
+    # 我们设置它为false，表示不检查,以减少启动时出错的情况
+    check: false

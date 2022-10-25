@@ -1,5 +1,5 @@
 server:
-  port: 20003
+  port: ${port:20003}
 #公共配置
 mybatis:
   configuration:
