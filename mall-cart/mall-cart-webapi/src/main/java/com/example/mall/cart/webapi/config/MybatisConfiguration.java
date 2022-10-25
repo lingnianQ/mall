@@ -1,4 +1,4 @@
-package com.syt.mall.cart.config;
+package com.example.mall.cart.webapi.config;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;
@@ -10,6 +10,6 @@ import org.springframework.context.annotation.Configuration;
  * @date 2022 2022/10/24 10:28
  */
 @Configuration
-@MapperScan("com.syt.mall.cart.mapper")
+@MapperScan("com.syt.mall.cart.webapi.mapper")
 public class MybatisConfiguration {
 }

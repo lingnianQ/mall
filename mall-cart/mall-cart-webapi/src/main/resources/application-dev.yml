@@ -1,6 +1,6 @@
 spring:
   application:
-    name: nacos-stock # 定义当前服务名称
+    name: nacos-cart # 定义当前服务名称
   cloud:
     nacos:
       discovery:
@@ -9,9 +9,6 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/csmall_db?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true
     username: root
     password: root
-logging:
-  level:
-    com.syt.mall.stock: debug
 dubbo:
   protocol:
     # port设置为-1 表示当前dubbo框架使用的端口自动寻找

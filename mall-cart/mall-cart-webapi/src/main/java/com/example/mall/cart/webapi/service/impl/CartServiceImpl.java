@@ -1,12 +1,13 @@
-package com.syt.mall.cart.service.impl;
+package com.example.mall.cart.webapi.service.impl;
 
-import com.syt.mall.cart.mapper.CartMapper;
+import com.example.mall.cart.webapi.mapper.CartMapper;
 import com.syt.mall.cart.service.ICartService;
 import com.syt.mall.commons.exception.MallServiceException;
 import com.syt.mall.commons.pojo.cart.dto.CartAddDTO;
 import com.syt.mall.commons.pojo.cart.model.Cart;
 import com.syt.mall.commons.restful.ResponseCode;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,7 @@ import org.springframework.stereotype.Service;
  * @author sytsnb@gmail.com
  * @date 2022 2022/10/24 10:53
  */
+@DubboService
 @Slf4j
 @Service
 public class CartServiceImpl implements ICartService {

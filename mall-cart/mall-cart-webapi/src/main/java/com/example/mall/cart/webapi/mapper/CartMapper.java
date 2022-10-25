@@ -1,4 +1,4 @@
-package com.syt.mall.cart.mapper;
+package com.example.mall.cart.webapi.mapper;
 
 import com.syt.mall.commons.pojo.cart.model.Cart;
 import org.apache.ibatis.annotations.Delete;
