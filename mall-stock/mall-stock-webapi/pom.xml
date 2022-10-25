@@ -53,6 +53,17 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
+        <!--Dubbo 在SpringCloud中使用的依赖-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-dubbo</artifactId>
+        </dependency>
+        <!--实现业务接口添加mall-stock-service依赖-->
+        <dependency>
+            <groupId>com.syt</groupId>
+            <artifactId>mall-stock-service</artifactId>
+            <version>0.0.1</version>
+        </dependency>
 
     </dependencies>
 </project>

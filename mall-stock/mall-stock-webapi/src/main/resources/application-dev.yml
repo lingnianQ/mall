@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: nacos-stock-webapi # 定义当前服务名称
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 # 指定正在运行的Nacos服务器的位置
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/csmall_db?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: root
+    password: root
+logging:
+  level:
+    com.syt.mall.stock: debug
+dubbo:
+  protocol:
+    # port设置为-1 表示当前dubbo框架使用的端口自动寻找
+    # 使用端口的规则时从20880开始寻找可用端口，+1寻找
+    port: -1
+    # 设置连接的名称，一般固定为dubbo即可
+    name: dubbo
+  registry:
+    # 指定当前Dubbo服务注册中心的类型和位置
+    address: nacos://127.0.0.1:8848
