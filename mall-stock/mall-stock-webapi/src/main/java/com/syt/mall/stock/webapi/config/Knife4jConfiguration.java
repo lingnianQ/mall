@@ -25,43 +25,43 @@ public class Knife4jConfiguration {
     /**
      * 【重要】指定Controller包路径
      */
-    private String basePackage = "com.syt.mall.stock.webapi.controller";
+    private final String basePackage = "com.syt.mall.stock.webapi.controller";
     /**
      * 分组名称
      */
-    private String groupName = "base-stock";
+    private final String groupName = "base-stock";
     /**
      * 主机名
      */
-    private String host = "http://java.tedu.cn";
+    private final String host = "http://java.tedu.cn";
     /**
      * 标题
      */
-    private String title = "stock项目案例在线API文档--基础stock-web实例";
+    private final String title = "stock项目案例在线API文档--基础stock-web实例";
     /**
      * 简介
      */
-    private String description = "构建基础stock-web项目,实现订单功能";
+    private final String description = "构建基础stock-web项目,实现订单功能";
     /**
      * 服务条款URL
      */
-    private String termsOfServiceUrl = "http://www.apache.org/licenses/LICENSE-2.0";
+    private final String termsOfServiceUrl = "http://www.apache.org/licenses/LICENSE-2.0";
     /**
      * 联系人
      */
-    private String contactName = "项目研发部";
+    private final String contactName = "项目研发部";
     /**
      * 联系网址
      */
-    private String contactUrl = "http://java.tedu.cn";
+    private final String contactUrl = "http://java.tedu.cn";
     /**
      * 联系邮箱
      */
-    private String contactEmail = "java@tedu.cn";
+    private final String contactEmail = "java@tedu.cn";
     /**
      * 版本号
      */
-    private String version = "0.0.1";
+    private final String version = "0.0.1";
 
     @Autowired
     private OpenApiExtensionResolver openApiExtensionResolver;

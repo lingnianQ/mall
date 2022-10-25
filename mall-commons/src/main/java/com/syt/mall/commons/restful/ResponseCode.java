@@ -19,7 +19,7 @@ public enum ResponseCode {
     INTERNAL_SERVER_ERROR(500);
 
     @Getter
-    private Integer value;
+    private final Integer value;
 
     ResponseCode(Integer value) {
         this.value = value;
