@@ -1,4 +1,4 @@
-package com.example.mall.cart.webapi.config;
+package com.syt.mall.cart.webapi.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.example.mall.cart.webapi.controller;
+package com.syt.mall.cart.webapi.controller;
 
 import com.syt.mall.cart.service.ICartService;
 import com.syt.mall.commons.pojo.cart.dto.CartAddDTO;

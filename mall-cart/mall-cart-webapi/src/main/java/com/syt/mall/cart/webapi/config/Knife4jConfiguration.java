@@ -1,4 +1,4 @@
-package com.example.mall.cart.webapi.config;
+package com.syt.mall.cart.webapi.config;
 
 import com.github.xiaoymin.knife4j.spring.extension.OpenApiExtensionResolver;
 import org.springframework.beans.factory.annotation.Autowired;

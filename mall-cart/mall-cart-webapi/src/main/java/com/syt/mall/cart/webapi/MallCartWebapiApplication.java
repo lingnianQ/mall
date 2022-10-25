@@ -1,4 +1,4 @@
-package com.example.mall.cart.webapi;
+package com.syt.mall.cart.webapi;
 
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;

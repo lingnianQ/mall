@@ -1,4 +1,4 @@
-package com.example.mall.cart.webapi.config;
+package com.syt.mall.cart.webapi.config;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;
