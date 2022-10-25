@@ -4,22 +4,28 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.syt</groupId>
-        <artifactId>mall</artifactId>
+        <artifactId>mall-stock</artifactId>
         <version>0.0.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>com.syt</groupId>
-    <artifactId>mall-stock</artifactId>
+    <artifactId>mall-stock-service</artifactId>
     <version>0.0.1</version>
 
-    <name>mall-stock</name>
-    <description>Demo Mall Stock</description>
-    <packaging>pom</packaging>
+    <name>mall-stock-service</name>
 
-    <modules>
-        <module>mall-stock-service</module>
-        <module>mall-stock-webapi</module>
-    </modules>
+    <description>Demo project for Spring Boot</description>
+
+
+    <dependencies>
+        <!--all-common依赖-->
+        <dependency>
+            <groupId>com.syt</groupId>
+            <artifactId>mall-commons</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+    </dependencies>
+
 
 </project>
