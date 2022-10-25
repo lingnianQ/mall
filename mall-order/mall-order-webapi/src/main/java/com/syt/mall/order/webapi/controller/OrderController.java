@@ -1,4 +1,4 @@
-package com.syt.mall.order.controller;
+package com.syt.mall.order.webapi.controller;
 
 import com.syt.mall.commons.pojo.order.dto.OrderAddDTO;
 import com.syt.mall.commons.restful.JsonResult;

@@ -1,4 +1,4 @@
-package com.syt.mall.order.config;
+package com.syt.mall.order.webapi.config;
 
 import com.github.xiaoymin.knife4j.spring.extension.OpenApiExtensionResolver;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,7 @@ public class Knife4jConfiguration {
     /**
      * 【重要】指定Controller包路径
      */
-    private final String basePackage = "com.syt.mall.order.controller";
+    private final String basePackage = "com.syt.mall.order.webapi.controller";
     /**
      * 分组名称
      */

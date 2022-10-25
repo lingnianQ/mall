@@ -1,4 +1,4 @@
-package com.syt.mall.order.config;
+package com.syt.mall.order.webapi.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

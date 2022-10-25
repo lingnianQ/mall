@@ -1,4 +1,4 @@
-package com.syt.mall.order.mapper;
+package com.syt.mall.order.webapi.mapper;
 
 import com.syt.mall.commons.pojo.order.model.Order;
 import org.apache.ibatis.annotations.Insert;
