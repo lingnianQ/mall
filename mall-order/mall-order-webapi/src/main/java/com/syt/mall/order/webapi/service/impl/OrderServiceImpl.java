@@ -57,6 +57,11 @@ public class OrderServiceImpl implements IOrderService {
         cartService.deleteUserCart(orderAddDTO.getUserId(),
                 orderAddDTO.getCommodityCode());
 
+        if (Math.random() < 0.5) {
+            throw new MallServiceException(
+                    ResponseCode.INTERNAL_SERVER_ERROR, "发送随机异常"
+            );
+        }
 
         Order order = new Order();
         BeanUtils.copyProperties(orderAddDTO, order);
