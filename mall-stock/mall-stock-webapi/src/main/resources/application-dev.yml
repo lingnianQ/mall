@@ -5,6 +5,10 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848 # 指定正在运行的Nacos服务器的位置
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8080 # 配置Sentinel提供的运行状态仪表台的位置
+        port: 8721 # 执行限流的端口号,每个项目需要设置不同的端口号,例如cart模块可以设置8722
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/csmall_db?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true
     username: root
