@@ -9,6 +9,10 @@ spring:
         server-addr: localhost:8848
         # ephemeral设置当前项目启动时注册到nacos的类型 true(默认):临时实例 false:永久实例
         ephemeral: false
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8080 # 配置Sentinel提供的运行状态仪表台的位置
+        port: 8725 # 执行限流的端口号,每个项目需要设置不同的端口号,例如cart模块可以设置8722
 dubbo:
   protocol:
     # port设置为-1 表示当前dubbo框架使用的端口自动寻找
