@@ -11,7 +11,7 @@ spring:
     password: root
 logging:
   level:
-    com.syt.mall.stock: debug
+    com.syt.mall.stock.webapi: debug
 dubbo:
   protocol:
     # port设置为-1 表示当前dubbo框架使用的端口自动寻找
@@ -26,3 +26,10 @@ dubbo:
     # 当前项目启动时，是否检查当前项目需要的所有Dubbo服务是否可用
     # 我们设置它为false，表示不检查,以减少启动时出错的情况
     check: false
+seata:
+  tx-service-group: mall_group # 定义事务的分组,一般以项目为单位,方便与其他项目区分
+  service:
+    vgroup-mapping:
+      mall_group: default # mall_group分组的配置,default会默认配置Seata
+    grouplist:
+      default: 127.0.0.1:8091 # 配置Seata服务器的地址和端口号
