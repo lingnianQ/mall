@@ -40,12 +40,12 @@ public class BusinessController {
         // 调用业务逻辑层方法
         businessService.buy();
         // 随机发生异常,测试服务降级
-        if (Math.random() < 0.5) {
-            throw new MallServiceException(
-                    //发生该异常,会降级
-                    ResponseCode.INTERNAL_SERVER_ERROR, "随机异常"
-            );
-        }
+//        if (Math.random() < 0.5) {
+//            throw new MallServiceException(
+//                    //发生该异常,会降级
+//                    ResponseCode.INTERNAL_SERVER_ERROR, "随机异常"
+//            );
+//        }
         return JsonResult.ok("购买完成!");
     }
 
