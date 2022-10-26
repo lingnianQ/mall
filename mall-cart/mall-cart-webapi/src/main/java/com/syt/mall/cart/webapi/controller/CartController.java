@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = "购物车管理")
 @Slf4j
 @RestController
-@RequestMapping("/cart")
+@RequestMapping("/base/cart")
 public class CartController {
 
     @Autowired

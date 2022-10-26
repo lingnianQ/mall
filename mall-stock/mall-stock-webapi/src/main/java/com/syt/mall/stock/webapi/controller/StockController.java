@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = "库存管理")
 @Slf4j
 @RestController
-@RequestMapping("/stock")
+@RequestMapping("/base/stock")
 public class StockController {
     @Autowired
     private IStockService stockService;

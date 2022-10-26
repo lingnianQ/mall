@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @Api(tags = "订单管理模块")
 @RestController
-@RequestMapping("/order")
+@RequestMapping("/base/order")
 public class OrderController {
 
     @Autowired
