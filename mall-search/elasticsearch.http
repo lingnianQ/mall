@@ -1,0 +1,72 @@
+### 分隔符--注释
+GET http://127.0.0.1:9200
+
+### 测试ES的分词功能,运行分词,查看分词结果
+POST http://127.0.0.1:9200/_analyze
+Content-Type: application/json
+
+{
+  "text": "My name is lingnian",
+  "analyzer": "standard"
+}
+
+### 测试ES的分词功能,运行分词,查看分词结果
+POST http://127.0.0.1:9200/_analyze
+Content-Type: application/json
+
+{
+  "text": "罗技激光鼠标",
+  "analyzer": "ik_smart"
+}
+
+### 测试ES的分词功能,运行分词,查看分词结果
+POST http://127.0.0.1:9200/_analyze
+Content-Type: application/json
+
+{
+  "text": "我们在北京天安门广场举行了奥林匹克运动会观看了升旗仪式",
+  "analyzer": "ik_max_word"
+}
+
+### 创建 index   -@PutMapping("/{questions}")
+PUT http://localhost:9200/questions
+
+### 删除一个Index -@DeleteMapping("/{questions}")
+DELETE http://localhost:9200/questions
+
+### 设置index中的文档属性采用ik分词
+POST http://localhost:9200/questions/_mapping
+Content-Type: application/json
+
+{
+  "properties": {
+    "title": {
+      "type": "text",
+      "analyzer": "ik_max_word",
+      "search_analyzer": "ik_max_word"
+    },
+    "content": {
+      "type": "text",
+      "analyzer": "ik_max_word",
+      "search_analyzer": "ik_max_word"
+    }
+  }
+}
+
+### questions 中添加文档
+POST http://localhost:9200/questions/_create/1
+Content-Type: application/json
+
+{
+  "id":1,
+  "title":"Java基本数据类型有哪些",
+  "content":"面时候为啥要问基本类型这么简单问题呀，我们要如何回答呢？"
+}
+
+
+
+
+
+
+
+
