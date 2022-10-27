@@ -25,6 +25,7 @@
         <module>mall-business</module>
         <module>mall-cart</module>
         <module>mall-order</module>
+        <module>mall-gateway</module>
     </modules>
 
     <properties>
