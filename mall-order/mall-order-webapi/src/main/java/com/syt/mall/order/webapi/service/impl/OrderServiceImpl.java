@@ -1,5 +1,7 @@
 package com.syt.mall.order.webapi.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.syt.mall.cart.service.ICartService;
 import com.syt.mall.commons.exception.MallServiceException;
 import com.syt.mall.commons.pojo.order.dto.OrderAddDTO;
@@ -15,6 +17,8 @@ import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * -@DubboService---order也是生产者,
@@ -69,6 +73,29 @@ public class OrderServiceImpl implements IOrderService {
         if (i != 1) {
             throw new MallServiceException(ResponseCode.CONFLICT, "新增订单失败");
         }
+    }
+
+    /**
+     * 分页查询所有订单信息的方法
+     * 参数page是页码,pageSize是每页条数
+     *
+     * @param page
+     * @param pageSize
+     * @return new PageInfo<>(list)
+     */
+    public PageInfo<Order> getAllOrdersByPage(Integer page, Integer pageSize) {
+        // PageHelper框架实现分页功能最核心的代码,是要编写在执行查询数据库代码之前的
+        // PageHelper.startPage方法就是在设置分页的查询条件
+        // page是查询的页码(从1开始),pageSize是每页条数
+        PageHelper.startPage(page, pageSize);
+        // 上面设置好分页查询条件,下面的查询在执行时,sql语句会自动被追加limit关键字
+        List<Order> list = orderMapper.findAllOrders();
+
+        // list变量并不是全查结果,而是只包含指定页码内容的数据
+        // 我们分页业务功能不能只返回分页查询结果,还需要提供分页信息
+        // PageHelper框架提供了PageInfo类,既能保存分页结果,也能保存分页信息
+        // 分页信息无需我们计算,直接实例化PageInfo对象,它会自动根据上面的查询生成
+        return new PageInfo<>(list);
     }
 
 }
