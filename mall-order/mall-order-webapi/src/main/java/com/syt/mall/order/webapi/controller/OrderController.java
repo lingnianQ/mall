@@ -3,6 +3,7 @@ package com.syt.mall.order.webapi.controller;
 import com.github.pagehelper.PageInfo;
 import com.syt.mall.commons.pojo.order.dto.OrderAddDTO;
 import com.syt.mall.commons.pojo.order.model.Order;
+import com.syt.mall.commons.restful.JsonPage;
 import com.syt.mall.commons.restful.JsonResult;
 import com.syt.mall.order.service.IOrderService;
 import com.syt.mall.order.webapi.service.impl.OrderServiceImpl;
@@ -28,7 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class OrderController {
 
     @Autowired
-    private OrderServiceImpl orderService;
+    private IOrderService orderService;
 
     @ApiOperation("添加订单")
     @PostMapping("/add")
@@ -43,11 +44,11 @@ public class OrderController {
             @ApiImplicitParam(value = "页码", name = "page", example = "1"),
             @ApiImplicitParam(value = "每页条数", name = "pageSize", example = "10")
     })
-    public JsonResult<PageInfo<Order>> pageOrders(
+    public JsonResult<JsonPage<Order>> pageOrders(
             Integer page, Integer pageSize) {
-        PageInfo<Order> pageInfo =
+        JsonPage<Order> jsonPage =
                 orderService.getAllOrdersByPage(page, pageSize);
-        return JsonResult.ok("查询完成", pageInfo);
+        return JsonResult.ok("查询完成", jsonPage);
 
     }
 }

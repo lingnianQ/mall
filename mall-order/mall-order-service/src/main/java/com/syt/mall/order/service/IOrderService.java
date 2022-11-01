@@ -1,6 +1,8 @@
 package com.syt.mall.order.service;
 
 import com.syt.mall.commons.pojo.order.dto.OrderAddDTO;
+import com.syt.mall.commons.pojo.order.model.Order;
+import com.syt.mall.commons.restful.JsonPage;
 
 /**
  * @author sytsnb@gmail.com
@@ -14,4 +16,13 @@ public interface IOrderService {
      * @param orderAddDTO 订单
      */
     void orderAdd(OrderAddDTO orderAddDTO);
+
+    /**
+     * 返回jsonPage类型
+     *
+     * @param page
+     * @param pageSize
+     * @return
+     */
+    JsonPage<Order> getAllOrdersByPage(Integer page, Integer pageSize);
 }

@@ -1,5 +1,6 @@
 package com.syt.mall.commons.restful;
 
+import com.github.pagehelper.PageInfo;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -23,7 +24,7 @@ public class JsonPage<T> implements Serializable {
     private Integer totalPages;
 
     @ApiModelProperty(value = "总条数", name = "totalCount")
-    private Integer totalCount;
+    private Long totalCount;
 
     @ApiModelProperty(value = "页码", name = "page")
     private Integer page;
@@ -36,5 +37,25 @@ public class JsonPage<T> implements Serializable {
     @ApiModelProperty(value = "分页数据", name = "list")
     private List<T> list;
 
-
+    /**
+     * 下面要编写一个能够将PageInfo类型对象转换为JsonPage类型对象的方法
+     * 如果需要将其他类型对象转换为JsonPage(例如SpringData的Page类型),另外编写方法即可
+     *
+     * @param pageInfo
+     * @param <T>
+     * @return result
+     */
+    public static <T> JsonPage<T> restPage(PageInfo<T> pageInfo) {
+        // 所谓转换的意思就是将pageInfo对象中的信息,赋值给JsonPage类型
+        JsonPage<T> result = new JsonPage<>();
+        // 因为PageInfo和JsonPage同名属性较少,所以手动赋值
+        result.setTotalCount(pageInfo.getTotal());
+        result.setTotalPages(pageInfo.getPages());
+        result.setPage(pageInfo.getPageNum());
+        result.setPageSize(pageInfo.getPageSize());
+        // 别忘了最后的分页数据
+        result.setList(pageInfo.getList());
+        // 最后返回JsonPage类型对象result
+        return result;
+    }
 }
