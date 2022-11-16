@@ -1,4 +1,12 @@
 spring:
+  kafka:
+    # 定义kafka的位置
+    bootstrap-servers: localhost:9092
+    # consumer.group-id 是kafka框架要求必须配置的内容,不配置启动会报错
+    # 意思是话题分组,区分kafka服务器上不同项目消息
+    # 分组名自动前缀message,mall.message
+    consumer:
+      group-id: mall
   application:
     name: nacos-cart # 定义当前服务名称
   cloud:
