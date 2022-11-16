@@ -1,4 +1,11 @@
 spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    # 设置虚拟host 单机模式下固定编写 "/" ,
+    virtual-host: /
   application:
     name: nacos-stock # 定义当前服务名称
   cloud:

@@ -34,7 +34,7 @@ public class QuartzConfig {
     @Bean
     public Trigger showTimeTrigger() {
         System.out.println("++++++++++++++++++++");
-        CronScheduleBuilder cron = CronScheduleBuilder.cronSchedule("0 26 21 * * ?");
+        CronScheduleBuilder cron = CronScheduleBuilder.cronSchedule("0/10 * * * * ?");
         return TriggerBuilder.newTrigger()
                 // 设置要绑定的jobDetail对象
                 .forJob(showTime())
